@@ -67,6 +67,7 @@ public class SaveUrlServlet extends HttpServlet {
                             String filePath = uploadPath + "/" + fileName;
                             File storeFile = new File(filePath);
                             item.write(storeFile);
+                            System.out.print("Got the file" +storeFile.getName());
                         }
                     } else {
                         byte[] fieldVal;
