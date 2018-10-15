@@ -4,6 +4,8 @@ import org.apache.tomcat.util.http.fileupload.FileItem;
 import org.apache.tomcat.util.http.fileupload.RequestContext;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,6 +19,8 @@ import java.util.List;
 
 @WebServlet(urlPatterns = "/saveFile", loadOnStartup = 1)
 public class SaveUrlServlet extends HttpServlet {
+
+    Logger logger = LoggerFactory.getLogger(SaveUrlServlet.class);
 
     private static final long serialVersionUID = 1L;
     private static final String UPLOAD_DIRECTORY = "upload";
@@ -68,6 +72,11 @@ public class SaveUrlServlet extends HttpServlet {
                             File storeFile = new File(filePath);
                             item.write(storeFile);
                             System.out.print("Got the file" +storeFile.getName());
+                            logger.trace("Got the file" +storeFile.getName());
+                            logger.debug("Got the file" +storeFile.getName());
+                            logger.info("Got the file" +storeFile.getName());
+                            logger.warn("Got the file" +storeFile.getName());
+                            logger.error("Got the file" +storeFile.getName());
                         }
                     } else {
                         byte[] fieldVal;
