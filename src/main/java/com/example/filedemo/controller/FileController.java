@@ -6,15 +6,23 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.websocket.server.PathParam;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -100,5 +108,47 @@ public class FileController {
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + dbFile.getFileName() + "\"")
                 .body(new ByteArrayResource(dbFile.getData()));
     }
+
+    @PostMapping("/editFile/{fileName}/{type}/{id}")
+    public ZohoResponse editFile(@RequestParam("file") MultipartFile files,  @PathVariable("fileName") String fileName,  @PathVariable("type") String type,  @PathVariable("id") String id) throws IOException {
+        File convFile = new File(fileName + ".docx");
+        convFile.createNewFile();
+        FileOutputStream fos = null;
+        ZohoResponse zohoResponse = null;
+        try {
+            fos = new FileOutputStream(convFile);
+
+        fos.write(files.getBytes());
+
+            zohoResponse = callZoho(convFile, fileName, type, id);
+        } catch (Exception e) {
+
+        } finally {
+            fos.close();
+        }
+        return zohoResponse;
+
+    }
+
+    public ZohoResponse callZoho(File file, String fileName, String type, String id) {
+        LinkedMultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
+        map.add("document", new FileSystemResource(file));
+        map.add("editor_settings", "{\"unit\":\"in\",\"language\":\"en\",\"view\":\"pageview\"}\n");
+        map.add("permissions", "{\"document.export\":true,\"document.print\":true,\"document.edit\":true,\"review.changes.resolve\":false,\"review.comment\":true,\"collab.chat\":true }");
+        map.add("callback_settings", "{\"save_format\":\"docx\",\"save_url\":\"https://example.com/zoho_save_callback\",\"context_info\":" + id + " }");
+        map.add("document_info", "{\"document_name\":\"Legal  Document\",\"document_id\":1349}");
+        map.add("user_info", "{\"user_id\":\"3001083\",\"display_name\":\"Mickel Jackson\"}");
+
+        org.springframework.http.HttpHeaders headers = new HttpHeaders();
+        //headers.setContentType(new MediaType("multipart", "form-data"));
+
+        RestTemplate template = new RestTemplate();
+
+        HttpEntity<LinkedMultiValueMap<String, Object>> requestEntity = new HttpEntity<LinkedMultiValueMap<String, Object>>(map, headers);
+        ResponseEntity<ZohoResponse> response = template.postForEntity("https://writer.zoho.com/v1/officeapi/document?apikey=49f1b6d07570d28cf729d4e2acdde0b5", requestEntity, ZohoResponse.class);
+        ZohoResponse res = response.getBody();
+        return res;
+    }
+
 
 }
