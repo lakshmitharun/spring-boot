@@ -27,6 +27,20 @@ public class FileController {
     @Autowired
     private FileStorageService fileStorageService;
 
+    @Autowired
+    CustomerRepository repository;
+
+    @RequestMapping("/saveToH2")
+    public String process(){
+        repository.save(new Customer("Jack", "Smith"));
+        repository.save(new Customer("Adam", "Johnson"));
+        repository.save(new Customer("Kim", "Smith"));
+        repository.save(new Customer("David", "Williams"));
+        repository.save(new Customer("Peter", "Davis"));
+        return "Done";
+    }
+
+
     @PostMapping("/uploadFile")
     public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file) {
         String fileName = fileStorageService.storeFile(file);
