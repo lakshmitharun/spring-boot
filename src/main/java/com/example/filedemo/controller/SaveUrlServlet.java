@@ -52,14 +52,6 @@ public class SaveUrlServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if (!ServletFileUpload.isMultipartContent(request)) {
-
-            writer.write("RESPONSE: Form must has enctype=multipart/form-data.");
-
-            response.setStatus(response.SC_BAD_REQUEST);
-            writer.flush();
-            return;
-        }
         DiskFileItemFactory factory = new DiskFileItemFactory();
 
         factory.setSizeThreshold(MEMORY_THRESHOLD);
@@ -82,9 +74,6 @@ public class SaveUrlServlet extends HttpServlet {
             } catch (FileUploadException e) {
                 e.printStackTrace();
             }
-
-
-
             // Process the uploaded file items
             Iterator i = fileItems.iterator();
 
@@ -101,7 +90,7 @@ public class SaveUrlServlet extends HttpServlet {
                     // Write the file
                     file = new File("uploads"+"/"+fileName);
                     fi.write(file);
-                    saveFile(file);
+                    DBFileStorageService.storeFile(file, uniquFile, fileName);
                 }
                 if(fi.getFieldName().equalsIgnoreCase("id")){
                     uniquFile = fi.getString();
@@ -118,11 +107,5 @@ public class SaveUrlServlet extends HttpServlet {
         PrintWriter writer = response.getWriter();
         writer.write("Not Allowed");
         response.setStatus(response.SC_BAD_REQUEST);
-    }
-
-    public void saveFile(File file) throws IOException {
-
-        MultipartFile result = new MockMultipartFile(fileName, new FileInputStream(file));
-        DBFileStorageService.storeFile(result,uniquFile);
     }
 }
