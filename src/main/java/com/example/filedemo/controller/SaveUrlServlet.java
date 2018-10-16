@@ -8,9 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
@@ -26,9 +24,15 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.output.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.web.multipart.MultipartFile;
 
 @WebServlet(urlPatterns = "/saveFile", loadOnStartup = 1)
 public class SaveUrlServlet extends HttpServlet {
+
+    @Autowired
+    private DBFileStorageService DBFileStorageService;
 
     Logger logger = LoggerFactory.getLogger(SaveUrlServlet.class);
 
@@ -94,6 +98,7 @@ public class SaveUrlServlet extends HttpServlet {
                     // Write the file
                     file = new File("uploads"+"/"+fileName);
                     fi.write(file);
+                    saveFile(file);
                 }
                 if(fi.getFieldName().equalsIgnoreCase("id")){
                     uniquFile = fi.getString();
@@ -112,5 +117,9 @@ public class SaveUrlServlet extends HttpServlet {
         response.setStatus(response.SC_BAD_REQUEST);
     }
 
+    public void saveFile(File file) throws IOException {
 
+        MultipartFile result = new MockMultipartFile(file.getName(), new FileInputStream(file));
+        DBFileStorageService.storeFile(result);
+    }
 }
