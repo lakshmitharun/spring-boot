@@ -34,6 +34,8 @@ public class SaveUrlServlet extends HttpServlet {
     @Autowired
     private DBFileStorageService DBFileStorageService;
 
+    String uniquFile = null;
+
     Logger logger = LoggerFactory.getLogger(SaveUrlServlet.class);
 
     private static final long serialVersionUID = 1L;
@@ -80,7 +82,7 @@ public class SaveUrlServlet extends HttpServlet {
                 e.printStackTrace();
             }
 
-            String uniquFile = null;
+
 
             // Process the uploaded file items
             Iterator i = fileItems.iterator();
@@ -120,6 +122,6 @@ public class SaveUrlServlet extends HttpServlet {
     public void saveFile(File file) throws IOException {
 
         MultipartFile result = new MockMultipartFile(file.getName(), new FileInputStream(file));
-        DBFileStorageService.storeFile(result);
+        DBFileStorageService.storeFile(result,uniquFile);
     }
 }
