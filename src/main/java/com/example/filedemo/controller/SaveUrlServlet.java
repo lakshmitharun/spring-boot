@@ -35,6 +35,7 @@ public class SaveUrlServlet extends HttpServlet {
     private DBFileStorageService DBFileStorageService;
 
     String uniquFile = null;
+    String fileName = null;
 
     Logger logger = LoggerFactory.getLogger(SaveUrlServlet.class);
 
@@ -92,7 +93,7 @@ public class SaveUrlServlet extends HttpServlet {
                 if (!fi.isFormField()) {
                     // Get the uploaded file parameters
                     String fieldName = fi.getFieldName();
-                    String fileName = fi.getName();
+                    fileName = fi.getName();
                     String contentType = fi.getContentType();
                     boolean isInMemory = fi.isInMemory();
                     long sizeInBytes = fi.getSize();
@@ -121,7 +122,7 @@ public class SaveUrlServlet extends HttpServlet {
 
     public void saveFile(File file) throws IOException {
 
-        MultipartFile result = new MockMultipartFile(file.getName(), new FileInputStream(file));
+        MultipartFile result = new MockMultipartFile(fileName, new FileInputStream(file));
         DBFileStorageService.storeFile(result,uniquFile);
     }
 }
