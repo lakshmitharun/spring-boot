@@ -135,7 +135,7 @@ public class FileController {
         map.add("document", new FileSystemResource(file));
         map.add("editor_settings", "{\"unit\":\"in\",\"language\":\"en\",\"view\":\"pageview\"}\n");
         map.add("permissions", "{\"document.export\":true,\"document.print\":true,\"document.edit\":true,\"review.changes.resolve\":false,\"review.comment\":true,\"collab.chat\":true }");
-        map.add("callback_settings", "{\"save_format\":\"docx\",\"save_url\":\"https://example.com/zoho_save_callback\",\"context_info\":" + id + " }");
+        map.add("callback_settings", "{\"save_format\":\"docx\",\"save_url\":\"https://immense-island-67360.herokuapp.com/saveFile\",\"context_info\":" + id + " }");
         map.add("document_info", "{\"document_name\":\"Legal  Document\",\"document_id\":1349}");
         map.add("user_info", "{\"user_id\":\"3001083\",\"display_name\":\"Mickel Jackson\"}");
 
