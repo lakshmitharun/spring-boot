@@ -1,9 +1,5 @@
 package com.example.filedemo.controller;
 
-import org.apache.tomcat.util.http.fileupload.FileItem;
-import org.apache.tomcat.util.http.fileupload.RequestContext;
-import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
-import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,7 +11,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
+import java.util.Iterator;
 import java.util.List;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.io.output.*;
 
 @WebServlet(urlPatterns = "/saveFile", loadOnStartup = 1)
 public class SaveUrlServlet extends HttpServlet {
@@ -23,10 +33,10 @@ public class SaveUrlServlet extends HttpServlet {
     Logger logger = LoggerFactory.getLogger(SaveUrlServlet.class);
 
     private static final long serialVersionUID = 1L;
-    private static final String UPLOAD_DIRECTORY = "upload";
     private static final int MEMORY_THRESHOLD = 1024 * 1024 * 3;
     private static final int MAX_FILE_SIZE      = 1024 * 1024 * 40;
     private static final int MAX_REQUEST_SIZE   = 1024 * 1024 * 50;
+    private File file;
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter writer = null;
@@ -52,59 +62,47 @@ public class SaveUrlServlet extends HttpServlet {
         ServletFileUpload upload = new ServletFileUpload(factory);
         upload.setFileSizeMax(MAX_FILE_SIZE);
         upload.setSizeMax(MAX_REQUEST_SIZE);
-        String uploadPath = getServletContext().getRealPath("") + File.separator + UPLOAD_DIRECTORY;
-        File uploadDir = new File(uploadPath);
+        File uploadDir = new File("uploads");
         if (!uploadDir.exists()) {
             uploadDir.mkdir();
         }
 
         try {
-            List<FileItem> formItems = (List<FileItem>) upload.parseRequest((RequestContext) request);
-            System.out.println("Form Items Values   >>>   " + formItems);
-            if (formItems != null && formItems.size() > 0) {
+            // Parse the request to get file items.
+            List fileItems = null;
+            try {
+                fileItems = upload.parseRequest(request);
+            } catch (FileUploadException e) {
+                e.printStackTrace();
+            }
 
-                for (FileItem item : formItems) {
-                    System.out.println("Field Name:" + item.getFieldName());
-                    if (!item.isFormField()) {
-                        if (item.getFieldName().equalsIgnoreCase("content")) {
-                            String fileName = new File(item.getName()).getName();
-                            String filePath = uploadPath + "/" + fileName;
-                            File storeFile = new File(filePath);
-                            item.write(storeFile);
-                            System.out.print("Got the file" +storeFile.getName());
-                            logger.trace("Got the file" +storeFile.getName());
-                            logger.debug("Got the file" +storeFile.getName());
-                            logger.info("Got the file" +storeFile.getName());
-                            logger.warn("Got the file" +storeFile.getName());
-                            logger.error("Got the file" +storeFile.getName());
-                        }
-                    } else {
-                        byte[] fieldVal;
-                        if (item.getFieldName().equalsIgnoreCase("filename")) {
-                            fieldVal = item.get();
-                            String fileNameValue = new String(fieldVal);
-                            System.out.println(item.getFieldName() + " value: " + fileNameValue);
-                        } else if (item.getFieldName().equalsIgnoreCase("id")) {
-                            fieldVal = item.get();
-                            String idValue = new String(fieldVal);
-                            System.out.println(item.getFieldName() + " value: " + idValue);
-                        } else if (item.getFieldName().equalsIgnoreCase("format")) {
-                            fieldVal = item.get();
-                            String formatValue = new String(fieldVal);
-                            System.out.println(item.getFieldName() + " value: " + formatValue);
-                        }
-                    }
+            String uniquFile = null;
+
+            // Process the uploaded file items
+            Iterator i = fileItems.iterator();
+
+            while (i.hasNext()) {
+                FileItem fi = (FileItem) i.next();
+                if (!fi.isFormField()) {
+                    // Get the uploaded file parameters
+                    String fieldName = fi.getFieldName();
+                    String fileName = fi.getName();
+                    String contentType = fi.getContentType();
+                    boolean isInMemory = fi.isInMemory();
+                    long sizeInBytes = fi.getSize();
+
+                    // Write the file
+                    file = new File("uploads"+"/"+fileName);
+                    fi.write(file);
                 }
-                response.setStatus(response.SC_OK);
-                writer.write("Document Saved Succesfully !!!");
+                if(fi.getFieldName().equalsIgnoreCase("id")){
+                    uniquFile = fi.getString();
+                }
             }
         } catch (Exception ex) {
-            response.setStatus(response.SC_BAD_REQUEST);
-
-            writer.write("RESPONSE:Document save fails");
-// For Custom message showing in zohoeditor
-
+            System.out.println(ex);
         }
+
     }
 
     public void doGet(HttpServletRequest request,
