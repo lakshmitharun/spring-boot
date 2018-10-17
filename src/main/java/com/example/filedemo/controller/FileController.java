@@ -42,6 +42,8 @@ public class FileController {
     @Autowired
     private DBFileStorageService DBFileStorageService;
 
+    int a=0;
+
     @RequestMapping("/saveToH2")
     public String process(){
         repository.save(new Customer("Jack", "Smith"));
