@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import sun.misc.BASE64Decoder;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.websocket.server.PathParam;
@@ -109,6 +110,32 @@ public class FileController {
                 .contentType(MediaType.parseMediaType("application/octet-stream"))
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + dbFile.getFileName() + "\"")
                 .body(new ByteArrayResource(dbFile.getData()));
+    }
+
+    @PostMapping("/editFileDecoded/{fileName}/{type}/{id}")
+    public ZohoResponse editFileWithBase(@RequestParam("filedecoded") String fileBase,  @PathVariable("fileName") String fileName,  @PathVariable("type") String type,  @PathVariable("id") String id) throws IOException {
+
+        BASE64Decoder decoder = new BASE64Decoder();
+        byte[] decodedBytes = decoder.decodeBuffer(fileBase);
+        File convFile = new File(fileName + ".docx");
+
+        FileOutputStream fop = null;
+
+        ZohoResponse zohoResponse = callZoho(convFile, fileName, type, id);
+
+        try {
+            fop = new FileOutputStream(convFile);
+
+            fop.write(decodedBytes);
+
+            zohoResponse = callZoho(convFile, fileName, type, id);
+        } catch (Exception e) {
+
+        } finally {
+            fop.close();
+        }
+        return zohoResponse;
+
     }
 
     @PostMapping("/editFile/{fileName}/{type}/{id}")
