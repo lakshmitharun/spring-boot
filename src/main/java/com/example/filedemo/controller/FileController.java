@@ -43,7 +43,7 @@ public class FileController {
     @Autowired
     private DBFileStorageService DBFileStorageService;
 
-    int a=0;
+    int b=0;
 
     @RequestMapping("/saveToH2")
     public String process(){
