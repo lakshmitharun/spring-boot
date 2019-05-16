@@ -4,15 +4,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <title>Spring Boot File Upload / Download Rest API Example</title>
         <link rel="stylesheet" href="/css/main.css" />
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     </head>
     <body>
         <noscript>
             <h2>Sorry! Your browser doesn't support Javascript</h2>
         </noscript>
         <div class="upload-container">
-            <div class="upload-header">
-                <h2>Spring Boot File Upload / Download Rest API Example</h2>
-            </div>
             <div class="upload-content">
                 <div class="single-upload">
                     <h3>Upload Single File</h3>
@@ -22,6 +34,11 @@
                     </form>
                     <div class="upload-response">
                         <div id="singleFileUploadError"></div>
+
+                            <div id="myDIV" style="display: none;" class="text-center">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#myModalFullscreen" contenteditable="false">Open Preview</button>
+                            </div>
+                        
                         <div id="singleFileUploadSuccess"></div>
                     </div>
                 </div>
@@ -38,6 +55,35 @@
                 </div>
             </div>
         </div>
+
+
+
+        <!-- /.container -->
+        <div class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog animated zoomInLeft">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h4 class="modal-title">Modal title</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <iframe id="myFrame" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+                            Your browser doesn't support iframes
+                        </iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
         <script src="/js/main.js" ></script>
     </body>
 </html>

@@ -2,6 +2,15 @@ package com.example.filedemo.controller;
 
 import com.example.filedemo.payload.UploadFileResponse;
 import com.example.filedemo.service.FileStorageService;
+import org.apache.batik.gvt.renderer.ImageRenderer;
+import org.apache.batik.transcoder.Transcoder;
+import org.apache.batik.transcoder.TranscoderException;
+import org.apache.batik.transcoder.TranscoderInput;
+import org.apache.batik.transcoder.TranscoderOutput;
+import org.apache.batik.transcoder.image.JPEGTranscoder;
+import org.apache.batik.transcoder.image.PNGTranscoder;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,15 +25,11 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import sun.misc.BASE64Decoder;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.websocket.server.PathParam;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.awt.*;
+import java.io.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -55,17 +60,147 @@ public class FileController {
         return "Done";
     }
 
+    @GetMapping("/save")
+    public String process1() throws TranscoderException {
+
+        FileInputStream fileInputStream = null;
+        FileOutputStream fileOutputStream = null;
+        File ff = new File("C:\\Users\\ponnl\\Desktop\\svgstyle.css");
+
+        try {
+            fileInputStream = new FileInputStream("C:\\Users\\ponnl\\Desktop\\USStates.svg");
+            fileOutputStream = new FileOutputStream("C:\\Users\\ponnl\\Desktop\\test\\Freesample.jpg");
+            TranscoderInput input = new TranscoderInput(fileInputStream);
+            //TranscoderInput input1 = new TranscoderInput(new FileInputStream("C:\\Users\\ponnl\\Desktop\\svgstyle.css"));
+            TranscoderOutput output = new TranscoderOutput(fileOutputStream);
+            JPEGTranscoder t = new JPEGTranscoder();
+
+            // Set the transcoding hints.
+            t.addTranscodingHint(JPEGTranscoder.KEY_QUALITY, new Float(.8));
+           //t.addTranscodingHint(JPEGTranscoder.KEY_USER_STYLESHEET_URI, ff.toURI().toString());
+            t.transcode(input, output);
+        } catch (IOException e) {
+
+        } finally { //  finally blocks are guaranteed to be executed
+            // close() can throw an IOException too, so we got to wrap that too
+            try {
+                if (fileInputStream != null) {
+                    fileInputStream.close();
+                }
+            } catch (IOException e) {
+                // handle an exception, or often we just ignore it
+            }
+        }
+            return "OK";
+    }
+    @PostMapping("/save2")
+    private byte[] renderPng(@RequestParam String type, @RequestParam Float quality) {
+
+        try {
+            byte[] svgBytes = IOUtils.toByteArray(new FileInputStream("C:\\Users\\ponnl\\Desktop\\USStates.svg"));
+            TranscoderInput transcoderInput = new TranscoderInput(new ByteArrayInputStream(svgBytes));
+            ByteArrayOutputStream output = new ByteArrayOutputStream();
+            TranscoderOutput transcoderOutput = new TranscoderOutput(output);
+
+            Transcoder transcoder = null;
+            if(type.equalsIgnoreCase("png")) {
+                transcoder = new PNGTranscoder()
+                {
+                    @Override
+                    protected ImageRenderer createRenderer()
+                    {
+                        ImageRenderer r = super.createRenderer();
+
+                        RenderingHints rh = r.getRenderingHints();
+
+                        rh.add(new RenderingHints(RenderingHints.KEY_ALPHA_INTERPOLATION,
+                                RenderingHints.VALUE_ALPHA_INTERPOLATION_QUALITY));
+                        rh.add(new RenderingHints(RenderingHints.KEY_INTERPOLATION,
+                                RenderingHints.VALUE_INTERPOLATION_BICUBIC));
+
+                        rh.add(new RenderingHints(RenderingHints.KEY_ANTIALIASING,
+                                RenderingHints.VALUE_ANTIALIAS_ON));
+
+                        rh.add(new RenderingHints(RenderingHints.KEY_COLOR_RENDERING,
+                                RenderingHints.VALUE_COLOR_RENDER_QUALITY));
+                        rh.add(new RenderingHints(RenderingHints.KEY_DITHERING,
+                                RenderingHints.VALUE_DITHER_DISABLE));
+
+                        rh.add(new RenderingHints(RenderingHints.KEY_RENDERING,
+                                RenderingHints.VALUE_RENDER_QUALITY));
+
+                        rh.add(new RenderingHints(RenderingHints.KEY_STROKE_CONTROL,
+                                RenderingHints.VALUE_STROKE_PURE));
+
+                        rh.add(new RenderingHints(RenderingHints.KEY_FRACTIONALMETRICS,
+                                RenderingHints.VALUE_FRACTIONALMETRICS_ON));
+                        rh.add(new RenderingHints(RenderingHints.KEY_TEXT_ANTIALIASING,
+                                RenderingHints.VALUE_TEXT_ANTIALIAS_OFF));
+
+                        r.setRenderingHints(rh);
+
+                        return r;
+                    }
+                };
+                transcoder.addTranscodingHint(PNGTranscoder.KEY_BACKGROUND_COLOR, Color.WHITE);
+            } else {
+                transcoder = new JPEGTranscoder();
+
+                Float jpegQuality = new Float(quality);
+                // KEY_WIDTH - seems to pick it up just fine from the SVG charts.  Set to 560 otherwise.
+                // KEY_QUALITY 0-1.0 with 1.0 being No Loss.  Value must be of type Float.
+                transcoder.addTranscodingHint(JPEGTranscoder.KEY_QUALITY, jpegQuality);
+            }
+
+            // NOTE: for linux you need Java 1.4.1+ AND the headless environment (e.g. export JAVA_OPTS='-Djava.awt.headless=true').
+            try {
+                transcoder.transcode(transcoderInput, transcoderOutput);
+            }
+            catch(Exception e) {
+                logger.error("SVG To Raster response transcode exception", e);
+                if(output != null) {
+                    output.close();
+                }
+                throw( new RuntimeException("SVG To Raster Filter Response Stream Exception", e) );
+            }
+
+            if(output != null) {
+                output.flush();
+                output.close();
+            }
+
+            transcoderInput  = null;
+            transcoderOutput = null;
+            transcoder = null;
+            if(type.equalsIgnoreCase("jpg")){
+                FileUtils.writeByteArrayToFile(new File("C:\\Users\\ponnl\\Desktop\\USStates1"+System.currentTimeMillis()+".jpg"), output.toByteArray());
+            }else{
+                FileUtils.writeByteArrayToFile(new File("C:\\Users\\ponnl\\Desktop\\USStates1"+System.currentTimeMillis()+".png"), output.toByteArray());
+            }
+
+            return output.toByteArray();
+        } catch (Exception exc) {
+            logger.error("Error in rendering png method", exc);
+        }
+        return new byte[0];
+    }
+
 
     @PostMapping("/uploadFile")
     public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file) {
-        String fileName = fileStorageService.storeFile(file);
+        String fileName = null;
+        try {
+           fileName  = fileStorageService.storeFileToBOX(file);
+        }catch (Exception e){
 
-        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
+        }
+
+        /*String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path("/downloadFile/")
                 .path(fileName)
-                .toUriString();
+                .toUriString();*/
 
-        return new UploadFileResponse(fileName, fileDownloadUri,
+        return new UploadFileResponse(file.getOriginalFilename(), fileName,
                 file.getContentType(), file.getSize());
     }
 

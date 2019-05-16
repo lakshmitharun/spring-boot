@@ -22,6 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+        <source.version>1.6</source.version>
 	</properties>
 
 	<dependencies>
@@ -30,10 +31,29 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+
+        <dependency>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+		<dependency>
+			<groupId>com.box</groupId>
+			<artifactId>box-java-sdk</artifactId>
+			<version>2.23.2</version>
+		</dependency>
+
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.docx4j</groupId>
+			<artifactId>docx4j</artifactId>
+			<version>6.1.1-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
@@ -53,6 +73,31 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-transcoder</artifactId>
+			<version>1.8</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>xmlgraphics-commons</artifactId>
+			<version>2.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>fr.avianey.apache-xmlgraphics</groupId>
+			<artifactId>batik</artifactId>
+			<version>1.8</version>
+		</dependency>
+
+
+
+
 
 
 		<dependency>
@@ -83,6 +128,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>

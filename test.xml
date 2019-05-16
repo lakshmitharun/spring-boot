@@ -1,0 +1,836 @@
+<w:body xmlns:dsp="http://schemas.microsoft.com/office/drawing/2008/diagram" xmlns:cppr="http://schemas.microsoft.com/office/2006/coverPageProps" xmlns:odx="http://opendope.org/xpaths" xmlns:c14="http://schemas.microsoft.com/office/drawing/2007/8/2/chart" xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:odgm="http://opendope.org/SmartArt/DataHierarchy" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" xmlns:we="http://schemas.microsoft.com/office/webextensions/webextension/2010/11" xmlns:pvml="urn:schemas-microsoft-com:office:powerpoint" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:sl="http://schemas.openxmlformats.org/schemaLibrary/2006/main" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:comp="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:b="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:xvml="urn:schemas-microsoft-com:office:excel" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:oda="http://opendope.org/answers" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:odc="http://opendope.org/conditions" xmlns:cdr="http://schemas.openxmlformats.org/drawingml/2006/chartDrawing" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:odi="http://opendope.org/components" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:lc="http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" xmlns:odq="http://opendope.org/questions" xmlns:wetp="http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11" xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid">
+    <w:p w:rsidRPr="007E60ED" w:rsidR="007C78BB" w:rsidP="00C77946" w:rsidRDefault="007C78BB">
+        <w:pPr>
+            <w:pStyle w:val="Heading2"/>
+            <w:numPr>
+                <w:ilvl w:val="0"/>
+                <w:numId w:val="0"/>
+            </w:numPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidRPr="00100C9D" w:rsidR="007C78BB" w:rsidP="007C78BB" w:rsidRDefault="007C78BB"/>
+    <w:p w:rsidRPr="00100C9D" w:rsidR="007C78BB" w:rsidP="007C78BB" w:rsidRDefault="007C78BB"/>
+    <w:p w:rsidRPr="00C77946" w:rsidR="00BE0615" w:rsidP="007C0DE8" w:rsidRDefault="00BE0615">
+        <w:pPr>
+            <w:pStyle w:val="NormalWeb"/>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+        </w:pPr>
+        <w:r w:rsidRPr="00C77946">
+            <w:rPr>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="begin"/>
+        </w:r>
+        <w:r w:rsidRPr="00C77946">
+            <w:rPr>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:instrText>pega:insert corr= pyApplicationProfileHeader</w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="00C77946">
+            <w:rPr>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="separate"/>
+        </w:r>
+        <w:r w:rsidRPr="00C77946">
+            <w:rPr>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:t>!Unexpected End of Formula</w:t>
+        </w:r>
+        <w:r w:rsidRPr="00C77946">
+            <w:rPr>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="end"/>
+        </w:r>
+    </w:p>
+    <w:p w:rsidRPr="004F7D06" w:rsidR="007C78BB" w:rsidRDefault="00B54437">
+        <w:pPr>
+            <w:pStyle w:val="NormalWeb"/>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:b/>
+                <w:i/>
+                <w:sz w:val="32"/>
+                <w:szCs w:val="32"/>
+            </w:rPr>
+        </w:pPr>
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="begin"/>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:instrText xml:space="preserve">pega:insert corr= </w:instrText>
+        </w:r>
+        <w:r>
+            <w:instrText>pyDefinition</w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="separate"/>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+            <w:t>!Unexpected End of Formula</w:t>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="end"/>
+        </w:r>
+        <w:r w:rsidRPr="004F7D06" w:rsidR="007C78BB">
+            <w:t xml:space="preserve"> </w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidRPr="00100C9D" w:rsidR="007C78BB" w:rsidRDefault="007C78BB">
+        <w:pPr>
+            <w:pStyle w:val="NormalWeb"/>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:sz w:val="32"/>
+                <w:szCs w:val="32"/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidRPr="00100C9D" w:rsidR="007C78BB" w:rsidRDefault="007C78BB">
+        <w:pPr>
+            <w:pStyle w:val="NormalWeb"/>
+            <w:jc w:val="center"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidRPr="00100C9D" w:rsidR="007C78BB" w:rsidRDefault="007C78BB">
+        <w:pPr>
+            <w:pStyle w:val="NormalWeb"/>
+            <w:jc w:val="center"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="007C78BB" w:rsidRDefault="007C78BB">
+        <w:pPr>
+            <w:pStyle w:val="NormalWeb"/>
+            <w:jc w:val="center"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidRPr="00100C9D" w:rsidR="00B86FA6" w:rsidRDefault="00B86FA6">
+        <w:pPr>
+            <w:pStyle w:val="NormalWeb"/>
+            <w:jc w:val="center"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidRPr="00100C9D" w:rsidR="007C78BB" w:rsidRDefault="007C78BB">
+        <w:pPr>
+            <w:pStyle w:val="NormalWeb"/>
+            <w:jc w:val="center"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidRPr="00100C9D" w:rsidR="007C78BB" w:rsidP="00A27FCC" w:rsidRDefault="00EC3B41">
+        <w:pPr>
+            <w:pStyle w:val="NormalWeb"/>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:sz w:val="36"/>
+                <w:szCs w:val="36"/>
+            </w:rPr>
+        </w:pPr>
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="begin"/>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:instrText xml:space="preserve">pega:insert corr= </w:instrText>
+        </w:r>
+        <w:r>
+            <w:instrText>pyPresentedOnForTemplate</w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:instrText xml:space="preserve"> </w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="separate"/>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+            <w:t>!Unexpected End of Formula</w:t>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="end"/>
+        </w:r>
+        <w:r w:rsidRPr="004F7D06" w:rsidR="007C78BB">
+            <w:t xml:space="preserve"> </w:t>
+        </w:r>
+        <w:r w:rsidRPr="004F7D06" w:rsidR="007C78BB">
+            <w:br/>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C57E05" w:rsidP="00C42B51" w:rsidRDefault="00C57E05">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidRPr="00A80BA7" w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="003C14C5">
+        <w:pPr>
+            <w:jc w:val="center"/>
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+        <w:r w:rsidRPr="00C42B51">
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="begin"/>
+        </w:r>
+        <w:r w:rsidRPr="00C42B51" w:rsidR="00150531">
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+            <w:instrText>symbol 211 \f "Symbol"</w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="00C42B51">
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="end"/>
+        </w:r>
+        <w:r w:rsidRPr="00C42B51" w:rsidR="00150531">
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+            <w:t xml:space="preserve"> </w:t>
+        </w:r>
+        <w:r w:rsidRPr="00C42B51">
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="begin"/>
+        </w:r>
+        <w:r w:rsidRPr="00C42B51" w:rsidR="00150531">
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+            <w:instrText xml:space="preserve"> DATE  \@ "yyyy"  \* MERGEFORMAT </w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="00C42B51">
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="separate"/>
+        </w:r>
+        <w:r w:rsidR="00E56872">
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+                <w:noProof/>
+            </w:rPr>
+            <w:t>2018</w:t>
+        </w:r>
+        <w:r w:rsidRPr="00C42B51">
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:b/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="end"/>
+        </w:r>
+        <w:r w:rsidRPr="00937528" w:rsidR="00150531">
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+            </w:rPr>
+            <w:br/>
+        </w:r>
+        <w:r w:rsidRPr="00A80BA7" w:rsidR="00C42B51">
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+            <w:t>Pegasystems Inc., Cambridge, MA</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:pPr>
+            <w:jc w:val="center"/>
+        </w:pPr>
+        <w:r>
+            <w:t>All rights reserved.</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:pPr>
+            <w:jc w:val="center"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:pPr>
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+        <w:r w:rsidRPr="00F53B00">
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+            <w:t>Trademarks</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidRPr="00F53B00" w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:pPr>
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>For Pegasystems Inc. trademarks and registered trademarks, all rights reserved. All other trademarks or service marks are property of their respective holders.</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51"/>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>For information about the third-party software that is delivered with the product, refer to the third-party license file on your installation media that is specific to your release.</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51"/>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:pPr>
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+        <w:r w:rsidRPr="00F53B00">
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+            <w:t>Notices</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidRPr="00F53B00" w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:pPr>
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>This publication describes and/or represents products and services of Pegasystems Inc. It may contain trade secrets and proprietary information that are protected by various federal, state, and international laws, and distributed under licenses restricting their use, copying, modification, distribution, or transmittal in any form without prior written authorization of Pegasystems Inc.</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51"/>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>This publication is current as of the date of publication only. Changes to the publication may be made from time to time at the discretion of Pegasystems Inc. This publication remains the property of Pegasystems Inc. and must be returned to it upon request. This publication does not imply any commitment to offer or deliver the products or services described herein.</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51"/>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t xml:space="preserve">This publication may include references to Pegasystems Inc. product features that have not been licensed by you or your company. If you have questions about whether a </w:t>
+        </w:r>
+        <w:proofErr w:type="gramStart"/>
+        <w:r>
+            <w:t>particular capability</w:t>
+        </w:r>
+        <w:proofErr w:type="gramEnd"/>
+        <w:r>
+            <w:t xml:space="preserve"> is included in your installation, please consult your Pegasystems Inc. services consultant.</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51"/>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>Although Pegasystems Inc. strives for accuracy in its publications, any publication may contain inaccuracies or typographical errors, as well as technical inaccuracies. Pegasystems Inc. shall not be liable for technical or editorial errors or omissions contained herein. Pegasystems Inc. may make improvements and/or changes to the publication at any time without notice.</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51"/>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t xml:space="preserve">Any references in this publication to non-Pegasystems websites are provided for convenience only and do not serve as an endorsement of these websites. The materials at these websites are not part of the material for Pegasystems </w:t>
+        </w:r>
+        <w:proofErr w:type="gramStart"/>
+        <w:r>
+            <w:t>products, and</w:t>
+        </w:r>
+        <w:proofErr w:type="gramEnd"/>
+        <w:r>
+            <w:t xml:space="preserve"> use of those websites is at your own risk.</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51"/>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>Information concerning non-Pegasystems products was obtained from the suppliers of those products, their publications, or other publicly available sources. Address questions about non-Pegasystems products to the suppliers of those products.</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51"/>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>This publication may contain examples used in daily business operations that include the names of people, companies, products, and other third-party publications. Such examples are fictitious and any similarity to the names or other data used by an actual business enterprise or individual is coincidental.</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51"/>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>This document is the property of:</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51"/>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>Pegasystems Inc.</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>One Rogers Street</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>Cambridge, MA  02142-1209</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>USA</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="00C42B51" w:rsidP="00C42B51" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>Phone: (617) 374-9600</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="004F63D5" w:rsidP="004F63D5" w:rsidRDefault="00C42B51">
+        <w:r>
+            <w:t>Fax: (617) 374-9620</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidR="007C78BB" w:rsidP="004F63D5" w:rsidRDefault="005D14D4">
+        <w:hyperlink w:history="true" r:id="rId8">
+            <w:r w:rsidRPr="00F569E4" w:rsidR="004F63D5">
+                <w:rPr>
+                    <w:rStyle w:val="Hyperlink"/>
+                </w:rPr>
+                <w:t>www.pega.com</w:t>
+            </w:r>
+        </w:hyperlink>
+    </w:p>
+    <w:p w:rsidRPr="00851A31" w:rsidR="004F63D5" w:rsidP="004F63D5" w:rsidRDefault="004F63D5">
+        <w:pPr>
+            <w:rPr>
+                <w:szCs w:val="20"/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidRPr="00851A31" w:rsidR="007C78BB" w:rsidRDefault="007C78BB">
+        <w:pPr>
+            <w:rPr>
+                <w:szCs w:val="20"/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidRPr="00851A31" w:rsidR="007C78BB" w:rsidRDefault="00150531">
+        <w:pPr>
+            <w:rPr>
+                <w:szCs w:val="20"/>
+            </w:rPr>
+        </w:pPr>
+        <w:r w:rsidRPr="00851A31">
+            <w:rPr>
+                <w:szCs w:val="20"/>
+            </w:rPr>
+            <w:t>Document Name:  Application Profile</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidRPr="00937528" w:rsidR="007C78BB" w:rsidP="00937528" w:rsidRDefault="007A69E4">
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="begin"/>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:instrText xml:space="preserve">pega:insert corr= </w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="007E2F9F">
+            <w:instrText xml:space="preserve">pzDocumentTemplateType </w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="separate"/>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+            <w:t>!Unexpected End of Formula</w:t>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="end"/>
+        </w:r>
+    </w:p>
+    <w:p w:rsidRPr="00937528" w:rsidR="007C78BB" w:rsidP="00937528" w:rsidRDefault="00720A02">
+        <w:r>
+            <w:t xml:space="preserve">Updated: </w:t>
+        </w:r>
+        <w:r w:rsidR="00764F07">
+            <w:t>August</w:t>
+        </w:r>
+        <w:r>
+            <w:t xml:space="preserve"> </w:t>
+        </w:r>
+        <w:r w:rsidR="00764F07">
+            <w:t>4</w:t>
+        </w:r>
+        <w:r w:rsidRPr="003D184A" w:rsidR="003D184A">
+            <w:rPr>
+                <w:vertAlign w:val="superscript"/>
+            </w:rPr>
+            <w:t>th</w:t>
+        </w:r>
+        <w:r w:rsidR="00A873A4">
+            <w:t>, 201</w:t>
+        </w:r>
+        <w:r w:rsidR="00764F07">
+            <w:t>7</w:t>
+        </w:r>
+    </w:p>
+    <w:p w:rsidRPr="00937528" w:rsidR="007C78BB" w:rsidP="007C78BB" w:rsidRDefault="007C78BB">
+        <w:pPr>
+            <w:rPr>
+                <w:rFonts w:cs="Arial"/>
+                <w:szCs w:val="20"/>
+            </w:rPr>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00CE7BE1" w:rsidP="00D93D80" w:rsidRDefault="00CE7BE1">
+        <w:pPr>
+            <w:spacing w:line="360" w:lineRule="auto"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00000A9F" w:rsidP="00D93D80" w:rsidRDefault="00000A9F">
+        <w:pPr>
+            <w:spacing w:line="360" w:lineRule="auto"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00000A9F" w:rsidP="00D93D80" w:rsidRDefault="00000A9F">
+        <w:pPr>
+            <w:spacing w:line="360" w:lineRule="auto"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00000A9F" w:rsidP="00D93D80" w:rsidRDefault="00000A9F">
+        <w:pPr>
+            <w:spacing w:line="360" w:lineRule="auto"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00000A9F" w:rsidP="00D93D80" w:rsidRDefault="00000A9F">
+        <w:pPr>
+            <w:spacing w:line="360" w:lineRule="auto"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="00000A9F" w:rsidP="00D93D80" w:rsidRDefault="00000A9F">
+        <w:pPr>
+            <w:spacing w:line="360" w:lineRule="auto"/>
+        </w:pPr>
+    </w:p>
+    <w:p w:rsidR="003C6DE9" w:rsidP="00D93D80" w:rsidRDefault="00000A9F">
+        <w:pPr>
+            <w:spacing w:line="360" w:lineRule="auto"/>
+        </w:pPr>
+        <w:r>
+            <w:br w:type="page"/>
+        </w:r>
+    </w:p>
+    <w:p w:rsidRPr="00685326" w:rsidR="00464F3B" w:rsidP="00D93D80" w:rsidRDefault="005A5B77">
+        <w:pPr>
+            <w:spacing w:line="360" w:lineRule="auto"/>
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+        </w:pPr>
+        <w:r w:rsidRPr="00685326">
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:lastRenderedPageBreak/>
+            <w:fldChar w:fldCharType="begin"/>
+        </w:r>
+        <w:r w:rsidRPr="00685326">
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:instrText xml:space="preserve">pega:insert corr=pzDocContentsHeader </w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="00685326">
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="separate"/>
+        </w:r>
+        <w:r w:rsidRPr="00685326">
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:t>!Unexpected End of Formula</w:t>
+        </w:r>
+        <w:r w:rsidRPr="00685326">
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="end"/>
+        </w:r>
+    </w:p>
+    <w:p w:rsidRPr="00685326" w:rsidR="00643459" w:rsidP="00D93D80" w:rsidRDefault="00464F3B">
+        <w:pPr>
+            <w:spacing w:line="360" w:lineRule="auto"/>
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+        </w:pPr>
+        <w:r w:rsidRPr="00685326">
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="begin"/>
+        </w:r>
+        <w:r w:rsidRPr="00685326">
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:instrText xml:space="preserve"> TOC \\o \"1-3\" \\h \\z \\u </w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="00685326">
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="separate"/>
+        </w:r>
+        <w:r w:rsidRPr="00685326">
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:bCs/>
+                <w:noProof/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:t>No table of contents entries found.</w:t>
+        </w:r>
+        <w:r w:rsidRPr="00685326">
+            <w:rPr>
+                <w:rFonts w:ascii="Open Sans" w:hAnsi="Open Sans" w:cs="Open Sans"/>
+                <w:b/>
+                <w:color w:val="1F2555"/>
+                <w:sz w:val="28"/>
+                <w:szCs w:val="28"/>
+            </w:rPr>
+            <w:fldChar w:fldCharType="end"/>
+        </w:r>
+    </w:p>
+    <w:p w:rsidRPr="00100C9D" w:rsidR="00000A9F" w:rsidP="00D93D80" w:rsidRDefault="00000A9F">
+        <w:pPr>
+            <w:spacing w:line="360" w:lineRule="auto"/>
+        </w:pPr>
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="begin"/>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:instrText xml:space="preserve">pega:insert corr= </w:instrText>
+        </w:r>
+        <w:r w:rsidR="003C76B8">
+            <w:instrText>pz</w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:instrText xml:space="preserve">DocumentChapters </w:instrText>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="separate"/>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:rPr>
+                <w:b/>
+            </w:rPr>
+            <w:t>!Unexpected End of Formula</w:t>
+        </w:r>
+        <w:r w:rsidRPr="00251F25">
+            <w:fldChar w:fldCharType="end"/>
+        </w:r>
+    </w:p>
+    <w:sectPr w:rsidRPr="00100C9D" w:rsidR="00000A9F" w:rsidSect="00937528">
+        <w:headerReference w:type="even" r:id="rId9"/>
+        <w:headerReference w:type="default" r:id="rId10"/>
+        <w:footerReference w:type="even" r:id="rId11"/>
+        <w:footerReference w:type="default" r:id="rId12"/>
+        <w:headerReference w:type="first" r:id="rId13"/>
+        <w:footerReference w:type="first" r:id="rId14"/>
+        <w:pgSz w:w="12240" w:h="15840"/>
+        <w:pgMar w:top="1800" w:right="1440" w:bottom="1440" w:left="1440" w:header="187" w:footer="432" w:gutter="0"/>
+        <w:cols w:space="720"/>
+        <w:docGrid w:linePitch="360"/>
+    </w:sectPr>
+</w:body>

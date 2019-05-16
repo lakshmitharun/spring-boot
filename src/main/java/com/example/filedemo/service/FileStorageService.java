@@ -1,5 +1,8 @@
 package com.example.filedemo.service;
 
+import com.box.sdk.BoxAPIConnection;
+import com.box.sdk.BoxFile;
+import com.box.sdk.BoxFolder;
 import com.example.filedemo.exception.FileStorageException;
 import com.example.filedemo.exception.MyFileNotFoundException;
 import com.example.filedemo.property.FileStorageProperties;
@@ -11,6 +14,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -36,6 +40,7 @@ public class FileStorageService {
     public String storeFile(MultipartFile file) {
         // Normalize file name
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+        System.out.print(fileName);
 
         try {
             // Check if the file's name contains invalid characters
@@ -51,6 +56,20 @@ public class FileStorageService {
         } catch (IOException ex) {
             throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
         }
+    }
+
+    public String storeFileToBOX(MultipartFile file) throws IOException {
+
+        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+        System.out.print(fileName);
+        BoxAPIConnection api = new BoxAPIConnection("jZ0r9NG8A7qFd4ZRBGXhX6NOWdDuUtO1");
+        BoxFolder rootFolder = BoxFolder.getRootFolder(api);
+        BoxFile.Info newFileInfo = rootFolder.uploadFile(file.getInputStream(), fileName);
+        System.out.print("fileName "+fileName);
+        BoxFile file1 = new BoxFile(api, newFileInfo.getID());
+        URL embedLink = file1.getPreviewLink();
+        System.out.print(embedLink.toString());
+        return (embedLink.toString());
     }
 
     public Resource loadFileAsResource(String fileName) {
